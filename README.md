@@ -37,20 +37,20 @@ When creating a dataset, the files used for training, validation or testing must
 ### Conversion to Graphs
 **Scripts**  
 
-The following scripts are required for the conversion:
+The following scripts are required for the conversion:  
 `TheCircuit.pm`: a Perl module we create to ease circuit's parsing. This module is required by `./Netlist_to_graph/Parsers/AntiSAT_bench_to_graph.pl`
 
-`./Netlist_to_graph/Parsers/AntiSAT_bench_to_graph.pl`: a Perl script that reads all of the locked files in a given dataset and converts the dataset into a single graph. It assigns unique numerical IDs (0 to N-1) to the nodes (gates). N represents the total number of nodes (gates) in the dataset. The list of nodes in the training set will be dumped in `tr.txt`. The list of nodes in the testing set will be dumped in `te.txt`. The list of nodes in the validation set will be dumped in `va.txt`. The extracted features will be dumped in `feat.txt`. The existence of an edge i between two vertices u and v is represented by the entry of ith line in `row.txt` (representing u's ID) and the entry of the ith line in `col.txt` (representing v's ID). The `row_tr.txt` and `col_tr.txt` are created to identify the edges exclusive to the training set.
+`./Netlist_to_graph/Parsers/AntiSAT_bench_to_graph.pl`: a Perl script that reads all of the locked files in a given dataset and converts the dataset into a single graph. It assigns unique numerical IDs (0 to N-1) to the nodes (gates). N represents the total number of nodes (gates) in the dataset. The list of nodes in the training set will be dumped in `tr.txt`. The list of nodes in the testing set will be dumped in `te.txt`. The list of nodes in the validation set will be dumped in `va.txt`. The extracted features will be dumped in `feat.txt`. The existence of an edge i between two vertices u and v is represented by the entry of ith line in `row.txt` (representing u's ID) and the entry of the ith line in `col.txt` (representing v's ID). The `row_tr.txt` and `col_tr.txt` are created to identify the edges exclusive to the training set.  
 
 
-`./Netlist_to_graph/Parsers/graph_parser.py`: a Python script that processes the files created by the Perl parser and generates the files required by GraphSAINT. It will mainly create the following files:
-`Dataset_info_log.txt`: log file with detailed information about the dataset.
-`adj_full.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is N by N. 
-`adj_train.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is also N by N. However, non-zeros in the matrix only correspond to edges connecting two training nodes. 
-`role.json`: a dictionary of three keys. Key `'tr'` corresponds to the list of all training node indices. Key `va` corresponds to the list of all validation node indices. Key `te` corresponds to the list of all test node indices. 
-`class_map.json`: a dictionary of length N. Each key is a node index, and each value is either a length C binary list. C represents the number of classes. For the case of Anti-SAT it is 2.
-`feats.npy`: a `numpy` array of shape N by F. F is the length of the feature vector.
-**Running the Conversion**
+`./Netlist_to_graph/Parsers/graph_parser.py`: a Python script that processes the files created by the Perl parser and generates the files required by GraphSAINT. It will mainly create the following files:  
+`Dataset_info_log.txt`: log file with detailed information about the dataset.  
+`adj_full.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is N by N.  
+`adj_train.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is also N by N. However, non-zeros in the matrix only correspond to edges connecting two training nodes.  
+`role.json`: a dictionary of three keys. Key `'tr'` corresponds to the list of all training node indices. Key `va` corresponds to the list of all validation node indices. Key `te` corresponds to the list of all test node indices.  
+`class_map.json`: a dictionary of length N. Each key is a node index, and each value is either a length C binary list. C represents the number of classes. For the case of Anti-SAT it is 2.  
+`feats.npy`: a `numpy` array of shape N by F. F is the length of the feature vector.  
+**Running the Conversion**   
 1) Create and activate conda environment with the required dependencies.
     ```sh
     $ conda create --name myenv python=3.6.8 tensorflow=1.12.0
@@ -63,7 +63,7 @@ The following scripts are required for the conversion:
     $ conda install -c anaconda cython=0.29.2
     ```
 2) Modify line 6 in `AntiSAT_bench_to_graph.pl` and place the full path to `theCircuit.pm`.
-3) Perform the conversion:
+3) Perform the conversion:  
     ```sh
     $ cd ./Netlist_to_graph/Graphs_datasets/anti_sat_iscas_c7552/
     $ cp ../../Parsers/graph_parser.py .
