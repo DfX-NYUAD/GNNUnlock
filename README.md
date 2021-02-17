@@ -35,7 +35,8 @@ The `./Netlist_to_graph/Circuits_datasets/` directory contains the `ANTI_SAT_DAT
     
 When creating a dataset, the files used for training, validation or testing must be identified. To split files into into Test/Train/validate, the files must be named accordingly. A locked file must be named as follows: [Test|Train|Validate]_*.bench
 ### Conversion to Graphs
-**Scripts**
+**Scripts**  
+
 The following scripts are required for the conversion:
 `TheCircuit.pm`: a Perl module we create to ease circuit's parsing. This module is required by `./Netlist_to_graph/Parsers/AntiSAT_bench_to_graph.pl`
 
