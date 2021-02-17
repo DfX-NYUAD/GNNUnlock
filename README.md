@@ -89,6 +89,7 @@ $ python -m graphsaint.tensorflow_version.train --data_prefix ../Netlist_to_grap
 ```
 `DATE21.yml` contains the hyperparameters used in (DATE '21)
 ## Citation & Acknowledgement
+If you find the code useful, please cite our paper:
 * DATE 2021:
 ```
 @inproceedings{alrahis2020gnnunlock,
