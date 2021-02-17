@@ -71,7 +71,7 @@ The following scripts are required for the conversion:
     $ python graph_parser.py
     $ cd ../../../
     ```
-### Node Classification
+## Node Classification
 
 GNNUnlock requires [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) to perform node classification (ICLR'20). We have used the TensorFlow implementation of GraphSAINT in all of the experiments reported in (DATE'21).
 Install GraphSAINT
