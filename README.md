@@ -48,8 +48,8 @@ The following scripts are required for the conversion:
 `adj_full.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is N by N.  
 `adj_train.npz`: a sparse matrix in CSR format, stored as a `scipy.sparse.csr_matrix`. The shape is also N by N. However, non-zeros in the matrix only correspond to edges connecting two training nodes.  
 `role.json`: a dictionary of three keys. Key `'tr'` corresponds to the list of all training node indices. Key `va` corresponds to the list of all validation node indices. Key `te` corresponds to the list of all test node indices.  
-`class_map.json`: a dictionary of length N. Each key is a node index, and each value is either a length C binary list. C represents the number of classes. For the case of Anti-SAT it is 2.  
-`feats.npy`: a `numpy` array of shape N by F. F is the length of the feature vector.  
+`class_map.json`: a dictionary of length N. Each key is a node index, and each value is a length C binary list. C represents the number of classes. For the case of Anti-SAT it is 2.  
+`feats.npy`: a `numpy` array of shape N by F. F is the length of the feature vector. For the case of circuits in Bench format, F=13.  
 **Running the Conversion**   
 1) Create and activate conda environment with the required dependencies.
     ```sh
