@@ -21,7 +21,7 @@ This repo contains the source code of the netlist-to-graph transformation from o
 * g++ >= 5.4.0
 * openmp >= 4.0
 
-* [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) - Graph sampling-based training for node classification. (ICLR '20 see the [Citation](#Citation-&-Acknowledgement) Section)
+* [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) - Graph sampling-based training for node classification.
 
 ## Netlist-to-graph Conversion
 ### Datasets
@@ -101,16 +101,7 @@ year={2021}
 }
 ```
 We owe many thanks to [Hanqing Zeng](https://sites.google.com/a/usc.edu/zengh/home) for making his GraphSAINT code available.
-* ICLR 2020:
-```
-@inproceedings{graphsaint-iclr20,
-title={{GraphSAINT}: Graph Sampling Based Inductive Learning Method},
-author={Hanqing Zeng and Hongkuan Zhou and Ajitesh Srivastava and Rajgopal Kannan and Viktor Prasanna},
-booktitle={International Conference on Learning Representations},
-year={2020},
-url={https://openreview.net/forum?id=BJe8pkHFwS}
-}
-```
+
 
 
 
