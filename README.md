@@ -2,14 +2,14 @@
 Lilas Alrahis, Satwik Patnaik, Faiq Khalid, Muhammad Abdullah Hanif, Hani Saleh, Muhammad Shafique, and Ozgur Sinanoglu
 
 **Contact**
-Lilas Alrahis (lilasrahis@gmail.com)
+Lilas Alrahis (lma387@nyu.edu)
 ### Overview 
 GNNUnlock is the first-of-its-kind oracle-less machine learning-based attack on provably secure logic locking (PSLL) that can identify any desired protection logic without focusing on a specific syntactic topology. The key is to leverage a well-trained graph neural network (GNN) to identify all the gates in a given locked netlist that belong to the targeted protection logic, without requiring an oracle. 
 
 ![GNNUnlock Concept](./overview_diagram.png)
 
 ### About This Repo
-This repo contains the source code of the netlist-to-graph transformation from our paper (DATE '21, see the [Citation](#Citation-&-Acknowledgement) Section). The scripts released here parse Anti-SAT/SFLL-HD locked circuits in bench/Gate-level Netlist format. Please contact Lilas Alrahis (lilasrahis@gmail.com) if you wish to expand Verilog netlists parsing to handle different tech libs. Also, please contact us if you wish to adapt the code to handle different locking schemes.
+This repo contains the source code of the netlist-to-graph transformation from our paper (DATE '21, see the [Citation](#Citation-&-Acknowledgement) Section). The scripts released here parse Anti-SAT/SFLL-HD locked circuits in bench/Gate-level Netlist format. Please contact Lilas Alrahis (lma387@nyu.edu) if you wish to expand Verilog netlists parsing to handle different tech libs. Also, please contact us if you wish to adapt the code to handle different locking schemes.
 ### Dependencies
 * python >= 3.6.8
 * tensorflow >=1.12.0  / pytorch >= 1.1.0
