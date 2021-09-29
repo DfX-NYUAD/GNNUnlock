@@ -77,7 +77,7 @@ The following scripts are required for the conversion:
     For the case of SFLL-HD, replace `AntiSAT_bench_to_graph.pl` with `SFLL_Verilog_to_graph.pl`
 ## Node Classification
 
-GNNUnlock requires [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) to perform node classification (ICLR'20). We have used the TensorFlow implementation of GraphSAINT in all of the experiments reported in (DATE'21).
+GNNUnlock requires [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) to perform node classification (ICLR'20). We have used the TensorFlow implementation of GraphSAINT in all of the experiments reported in (DATE'21 and TETC'21).
 Install GraphSAINT
 ```sh
 $ git clone https://github.com/GraphSAINT/GraphSAINT.git
@@ -94,7 +94,7 @@ $ python -m graphsaint.tensorflow_version.train --data_prefix ../Netlist_to_grap
 `DATE21.yml` contains the hyperparameters used in (DATE '21) for Anti-SAT
 `SFLL_params.yml` contains the hyperparameters used in (DATE '21) for SFLL-HD h=2
 ## Citation & Acknowledgement
-If you find the code useful, please cite our paper:
+If you find the code useful, please cite our papers:
 * DATE 2021:
 ```
 @inproceedings{alrahis2020gnnunlock,
@@ -104,6 +104,18 @@ booktitle={IEEE/ACM Design, Automation and Test in Europe Conference},
 pages={780--785},
 year={2021}
 }
+```
+* TETC 2021:
+```
+@ARTICLE{GNNUnlock_TETC,
+  author={Alrahis, Lilas and Patnaik, Satwik and Hanif, Muhammad Abdullah and Saleh, Hani and Shafique, Muhammad and Sinanoglu, Ozgur},
+  journal={IEEE Transactions on Emerging Topics in Computing}, 
+  title={{GNNU}nlock+: A Systematic Methodology for Designing Graph Neural Networks-based Oracle-less Unlocking Schemes for Provably Secure Logic Locking}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TETC.2021.3108487}}
 ```
 We owe many thanks to [Hanqing Zeng](https://sites.google.com/a/usc.edu/zengh/home) for making his GraphSAINT code available.
 
