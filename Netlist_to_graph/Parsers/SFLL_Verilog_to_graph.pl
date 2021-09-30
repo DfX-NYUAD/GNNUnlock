@@ -94,9 +94,9 @@ format INFO_MSG =
      @|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
      "Version $rel_num  Released on $rel_date"
      @|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     'Lilas Alrahis <lilasrahis@gmail.com>'
+     'Lilas Alrahis <lma387@nyu.com>'
      @|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-     'Khalifa Univerity/NYUAD, Abu Dhabi, UAE'
+     'NYUAD, Abu Dhabi, UAE'
 
      @|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
      "\'$prog_name -help\' for help"
