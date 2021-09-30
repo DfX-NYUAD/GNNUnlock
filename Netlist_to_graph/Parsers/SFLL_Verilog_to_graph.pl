@@ -5,7 +5,7 @@ use FindBin;    # New in Perl5.004
 use Data::Dumper;
 use List::Util qw/shuffle/;
 #TODO Change the next line
-#require "/home/lalrahis/Perl_codes/theCircuit.pm";
+require "/home/lalrahis/Perl_codes/theCircuit.pm";
 use File::Path qw( make_path );
 use File::Spec;
 
