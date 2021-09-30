@@ -22,7 +22,7 @@ This repo contains the source code of the netlist-to-graph transformation from o
 * openmp >= 4.0
 
 * [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) - Graph sampling-based training for node classification.
-
+* More info regarding conda env setup/creation is given below.
 ## Netlist-to-graph Conversion
 ### Datasets
 The `./Netlist_to_graph/Circuits_datasets/` directory contains the `ANTI_SAT_DATASET_c7552` dataset used in (DATE '21). The dataset contains 30 locked ISCAS benchmark circuits.
@@ -68,13 +68,14 @@ The following scripts are required for the conversion:
 2) Modify line 6 in `AntiSAT_bench_to_graph.pl` and place the full path to `theCircuit.pm`. Modify line 8 in `SFLL_Verilog_to_graph.pl` and place the full path to `theCircuit.pm`.
 3) Perform the conversion:  
     ```sh
+    $ mkdir -p ./Netlist_to_graph/Graphs_datasets/anti_sat_iscas_c7552/
     $ cd ./Netlist_to_graph/Graphs_datasets/anti_sat_iscas_c7552/
     $ cp ../../Parsers/graph_parser.py .
     $ perl ../../Parsers/AntiSAT_bench_to_graph.pl -i ../../Circuits_datasets/ANTI_SAT_DATASET_c7552 > log.txt
     $ python graph_parser.py
     $ cd ../../../
     ```
-    For the case of SFLL-HD, replace `AntiSAT_bench_to_graph.pl` with `SFLL_Verilog_to_graph.pl`
+    For the case of SFLL-HD, replace `AntiSAT_bench_to_graph.pl` with `SFLL_Verilog_to_graph.pl`. Unzip the SFLL circuit datasets before parsing.
 ## Node Classification
 
 GNNUnlock requires [GraphSAINT](https://github.com/GraphSAINT/GraphSAINT) to perform node classification (ICLR'20). We have used the TensorFlow implementation of GraphSAINT in all of the experiments reported in (DATE'21 and TETC'21).
