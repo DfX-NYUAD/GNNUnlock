@@ -33,7 +33,7 @@ The `./Netlist_to_graph/Circuits_datasets/` directory contains the `ANTI_SAT_DAT
 - 8 circuits are kept for testing
     - 8 locked versions of c7552
     
-When creating a dataset, the files used for training, validation or testing must be identified. To split files into into Test/Train/validate, the files must be named accordingly. A locked file must be named as follows: [Test|Train|Validate]_*.bench
+When creating a dataset, the files used for training, validation or testing must be identified. To split files into Test/Train/validate, the files must be named accordingly. A locked file must be named as follows: [Test|Train|Validate]_*.bench
 
 The directory also contains two datasets for SFLL-HD. For the case of SFLL-HD, the locking is performed at RTL. Then, the locked files are synthesized using Synopsys design compiler with Global Foundries 65nm LPe.
 ### Conversion to Graphs
