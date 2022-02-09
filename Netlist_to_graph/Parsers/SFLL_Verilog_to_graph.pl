@@ -1006,9 +1006,10 @@ $features_array[$features_map{$inputt}]=($prev+1);
 my @INNputs=$current_ob->get_fedbygates();
 foreach my $inputtt (@INNputs){
 if(exists($features_map{$inputtt})){
-my $prev=$features_array[$features_map{$inputt}];
-$features_array[$features_map{$inputt}]=($prev+1);	
-}
+if ($inputtt ne "PI" && $inputtt ne "PO" && $inputtt ne "KI"){
+my $prev=$features_array[$features_map{$inputtt}];
+$features_array[$features_map{$inputtt}]=($prev+1);	
+}}
 }
 }
 else{
@@ -1058,11 +1059,11 @@ foreach my $inputtt (@INNputs){
 
 
 if(exists($features_map{$inputtt})){
-
+if ($inputtt ne "PI" && $inputtt ne "PO" && $inputtt ne "KI"){
 my $prev=$features_array[$features_map{$inputtt}];
 $features_array[$features_map{$inputtt}]=($prev+1);
 	
-}
+}}
 
 }
 print FH_ROW "$count\n";
